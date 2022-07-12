@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    /* max-width: 1600px;
+    margin: 0 auto; */
+    background-color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav{
+    background-color: #EF5122;
+    display: flex;
+    justify-content: space-between;
+    min-height:40px;
+    padding: 10px 30px;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin: auto 25px;
+}
+.nav-item{
+    display: inline-block;
+    margin: 0 20px;
+    color: #fff;
+    font-size:20px;
+}
+.nav-item:hover{
+    color: rgb(25, 255, 25);
+}
+/* Navbar */
+
+.form-container{
+    background-color: #fff;
+    max-width: 800px;
+    padding: 50px 70px;
+    margin: 30px auto;
+}
+.form__row{
+    display: flex;
+    padding: 8px 0;
+}
+.form__label{
+    min-width:90px;
+}
+.form__input{
+    flex: 1;
+}
+
+/* Form layout */
+
+.column-layout{
+    display: flex;
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 15px 0;
+}
+.column-layout h2{
+    padding-bottom:20px ;
+}
+.sidebar-one{
+    flex: 1;
+    padding: 0 20px;
+}
+.sidebar-two{
+    flex: 1;
+    padding: 0 20px;
+}
+.main-column{
+    flex: 3;
+    padding: 0 20px;
+}
+
+/* Column layout  */
+
+.feature-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+@media (min-width: 768px){
+    .feature-layout{
+        flex-direction: row;
+    }
+}
+.feature-item{
+    padding:20px;
+    margin-top: 20px;
+    flex-basis: 30%;
+}
+.feature-item h2{
+    margin-bottom: 20px;
+}
+.feature-item:nth-child(1){
+    background-color: rgb(100, 231, 111);
+}
+.feature-item:nth-child(2){
+    background-color: rgb(41, 223, 214);
+}
+.feature-item:nth-child(3){
+    background-color: rgb(222, 122, 240);
+}
+
+
+/* Feature layout */
+
+.wrap-layout{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 50px 30px;
+}   
+.wrap-layout__item{
+    background-color:hsl(34, 92%, 45%);
+    width: 148px;
+    height: 90px;
+    font-size:30px;
+    color: #fff;
+    font-weight:700;
+    text-align: center;
+    line-height:90px;
+}
+
+/* Wrap layout */
+
+.center-layout{
+    background-color:rgb(25, 255, 25);
+    margin: 36px auto 0 auto;
+    padding:32px 0;
+    max-width: 600px;
+    height:360px;
+    display: flex;
+}
+.center-layout__item{
+    color: #fff;
+    font-size:30px;
+    font-weight: 700;
+    margin: auto;
+}
+/* center-layout */
+
+.chart-layout {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto 0 auto;
+    padding:30px 0;
+    height:300px;
+}
+
+.chart-layout__item {
+    width: 60px;
+    height:var(--percent);
+    background-color: #EF5122;
+    align-self: flex-end;
+    text-align: center;
+    color: #fff;
+    animation: oce ease-in 0.7s; 
+}
+@keyframes oce{
+    from{
+        opacity: 0;
+        height:calc(var(--percent) - 60%);
+    }to{
+        opacity: 1;
+        height:var(--percent);
+    }
+}
+/* chart-layout */
+
+.the-end{
+    display: flex;
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+}
+.the-end__first{
+    flex: 1;
+    background-color:#fff;
+    padding: 20px 16px;
+}
+.the-end__second{
+    display: flex;
+    flex: 1;
+    flex-direction:column;
+}
+.the-end__second-one{
+    background-color: aquamarine;
+    flex: 1;
+    padding: 20px 16px;
+}
+.the-end__second-two{
+    background-color: greenyellow;
+    flex: 1;
+    padding: 20px 16px;
+} 
+/* .the-end{
+    padding: 50px 0;
+    display: flex;
+    max-width: 800px;
+    min-height:40px;
+    margin: auto;
+}
+.the-end__first{
+    background-color:rgb(210, 226, 68);
+    padding: 20px 15px;
+    flex: 1;
+}
+.the-end__second{
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+}
+.the-end__second-one{
+    flex: 1;
+    background-color: rgb(210, 90, 214);
+    padding: 20px 15px;
+}
+.the-end__second-two{
+    flex: 1;
+    background-color: rgb(102, 100, 223);
+    padding: 20px 15px;
+} */
+/* the-end */

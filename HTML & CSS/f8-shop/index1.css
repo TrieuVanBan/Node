@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    background-color: aqua;
+    display: flex;
+}
+
+.pc , .tablet, .mobile{
+    color: white;
+    margin: auto;
+    display: none;
+}
+
+/* mobile < 739px */
+@media only screen and (max-width: 46.1875em){
+    .mobile{
+        display: block;
+    }
+}
+/* tablet >= 740px and < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 64em){
+    .tablet{
+        display: block;
+    }
+}
+/* pc > 1024px */
+@media only screen and (min-width: 64em){
+    .pc{
+        display: block;
+    }
+}
