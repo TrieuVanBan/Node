@@ -1,0 +1,14 @@
+chay 
+tsc -w ten_file
+Tsc --init (file js)
+
+
+
+npm init vite@latest app -- --template react-ts
+npm i react-router-dom axios react-hook-form
+"server": "json-server --watch db.json --port 3003"
+
+
+npm install react-bootstrap bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+const { register, handleSubmit, formState:{errors} } = useForm<FormInputs>();

@@ -1,0 +1,171 @@
+        <HTML>
+<h1>...<6> : Chữ từ to đến nhỏ
+<strong> : in đậm
+<i> <em> <address> : in nghiêng
+<sub> : mũ dưới
+<sup> :  mũ trên
+<mark> : làm nổi bật
+<u> <ins> : 
+<br/> : Xuống dòng
+<p> : Viết văn bản
+<center> : căn đoạn văn bản bên trong thẻ ra giữa trang
+< hr >: tạo 1 dòng gạch ngang để ngăn cách 2 dòng chữ
+< pre> : hiển thị như những gì mình viết
+
+
+
+     <CSS>
+
+width : chiều rộng
+margin : căn giữa toàn bộ nội dung
+background-color : thay đổi màu nền
+font-size : thay đổi cỡ chữ
+color : thay đổi màu sắc
+border : đường viền
+text-align: căn lề
+                   Left (trái)
+                   Right (phải)
+                   Center (giữa)
+                   Fustify (2 bên)
+text-decoration: trang trí văn bản
+                              uderline (gạch chân)
+                              line-through ( gạch ngang ở giữa)
+                              overline (gạch trên)
+                             none (bỏ gạch)
+text-shadow : làm bóng văn bản
+                         VD : text-shadow : 5px-10px 5px red
+                                                         Phải (5px) trên (10px) nhòe (5px) màu đỏ
+<< TABLE >>
+-boder : 1px solid red;
+-boder-collapse : collapse;  (tạo 1 đường kẻ)
+-table-layout : fixed;  (căn đều các dòng) 
+-tbody tr:nth-last-child (even){ }    (hàng lẻ)
+                                           (odd){ }     (hàng chẵn)
+<< Dislay >>
+-dislay : none; ( không hiển thị nội dung )
+-dislay : inline ( vừa tròn nội dung  , không thêm được width,height )
+-dislay : block ( chiếm toàn bộ hàng chứa nội dung đó )
+-dislay : inline – block ( vừa tròn nội dung , thêm được width,height )
+
+<< Đơn vị css >>
+-rem : phụ thuộc vào font-size của thẻ html{ }
+-em : phụ thuộc vào thẻ cha gần nhất
+-vw; vh : (hight, width) tính theo đúng % của trình duyệt
+-% : tính theo % của thẻ cha chứa nó 
+<< Attributes >>
+Attributes là các thuộc tính của các thẻ trong html VD : onclick; style; class; title ...
+VD : <h2 title="Đây là tiêu đề" >Attributes</h2>
+
+<< Các kiểu css trong html >>
+Internal (css trong cặp thẻ style ở html)
+External (css ở file riêng)
+Inline (css trong thẻ mở. VD :h1, h2 ... )
+    
+<< Tạo biến css>>
+:root {
+--tenbien: red;
+(Biến toàn cục )
+}
+Gọi biến
+Color : var(--tenbien);
+Có thể tạo biến ngay trong thẻ và gọi luôn trong thẻ đó  (Biến cục bộ)
+
+<< Box -sizing>>
+Box-sizing : unset; (Hủy đi thuộc tính box-sizing : border -box)
+Backgrought-clip : border-box(Mặc định)
+Backgrought-clip : padding-box(Đổ màu từ padding vào trong )
+Backgrought-clip : content-box(Đổ màu từ content vào trong)
+<< Background-image>>
+Background-image : url ( link… );
+Background-size : 100px; ( rộng 100px, dài auto )
+Background-repeat : no-repeat; (Mất đi thuộc tính lặp lại)
+<< Background-size>>
+Background-size: contain (Lấy kích thước vừa đủ)
+Background-size: cover (Lấy chiều dài bức ảnh mặc kệ bị che khuất, không để hở khoảng trắng)
+
+<< Background-origin>>
+Backgrought-origin : border-box (Đổ màu từ boder vào trong)
+Backgrought- origin : padding-box (Mặc định )
+Backgrought- origin : content-box (Đổ màu từ content vào trong)
+
+<< Background-position>> Vị trí
+Ví dụ : background-position : top left ; (Vị trí ảnh là trên và ở bên trái)
+             background-position : top 20px left 20px ; (Vị trí ảnh là trên cách 20px và ở bên trái  cách 20px)
+
+<< Background-shorthand>>
+Background: url (link...) no-repeat center / contain;
+(Không cho lặp lại, căn giữa, Lấy kích thước vừa đủ không bị khuất ảnh)
+
+<< CSS functions>>
+
+<< Pseudo classes>>  (Hiệu ứng)
+:hover {} (Hiệu ứng di chuột)
+:active{} (Hiệu ứng khi ấn chuột)
+:first-child {} (Selec dòng đầu)
+:last-child {} (Selec dòng cuối)
+<< Pseudo elements>>  (Tạo lớp giả)
+::before (Tạo lớp giả ở đầu)
+::after(Tạo lớp giả ở cuối)
+::first-letter (Css cho chữ cái đầu tiên)
+::first-line (Css cho dòng đầu tiên)
+::selection (Css khi mình bôi đen lên phần tử đó VD: Đổi màu , đổi font ...)
+
+<< Position: ralative>>  
+Là vị trí tương đối, lấy chính mình làm góc tọa độ.
+Top, left, right, bottom chỉ hoạt động khi có positinon : ralative
+
+<< Position: absolute>>  
+Phụ thuộc vào thẻ cha position gần nhất để lấy góc tọa độ.
+
+<< Position: fixed>>  
+Làm cho thẻ chứa thuộc tính này dính tại chỗ khi lăn chuột (Không di chuyển)
+
+<< Position: sticky>>  
+Khi lăn chuột sẽ dính lại khi mình lăn chuột (Nó sẽ dừng lại tùy vào top, bottom mình đặt)
+
+<< Flex-box>>  
+Flex-wap: wrap; (Thu vào dính nhau tự động xuống dòng )
+Flex-basis: 30%; (Chia đều các thẻ con, đặt trong các thẻ con )
+
+<< BEM>>  
+# Cú pháp :
+.block (Tên class)
+.block__element (Tên thẻ con trong class)
+.block--modifier 
+.block__element—modifier
+
+cursor: pointer; (Di chuột vào hiện hình bàn tay thẻ button)
+
+<< Animation>>  
+transform-origin: calc(100% - 20px) top;
+(Khi di chuột vào hover chạy từ top ra thay vì từ chính giữa)
+
+<<Tạo dấu ... ở cuối dòng >>  
+
+(áp dụng được với 1 dòng)
+Height: 1.8rem; (Tổng độ rộng của thẻ chứa chữ)
+Text-overflow: ellipsis;
+While-space: nowrap;
+
+(áp dụng được với 1 hoặc nhiều dòng)
+Height: 3.6rem; (Tổng độ rộng của thẻ chứa chữ)
+Overflow: hidden;
+Dislay: block;
+Dislay: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; (Hiển thị ... ở dòng thứ 2)
+
+box-shadow: ngang - dưới – nhòe – màu; 
+
+Box-sizing: border-box;
+// Không làm thay đổi border
+@medio sceen 
+@font-face{  ( Gọi font ra css )
+Font-family :  ( Đặt tên font )
+}
+
+font awesome 5.0 icon cdn
+
+
+
+

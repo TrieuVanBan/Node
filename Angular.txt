@@ -1,0 +1,20 @@
+npm i
+
+picsum
+ng g c ten
+
+ng g s service/category
+
+
+
+
+
+
+
+ - Observable cung cấp kiểu xử lí bất đồng bộ về phía component lắng nghe dữ liệu
+ - Với kiểu trả về Observable thì có phương thức subscribe để lắng nghe
+
+List : tạo hàm getProducts ở file service có phương thức là get để lấy ra danh sách sp rồi sang list.ts để gọi hàm getProducts, với kiểu trả về Observable thì có phương thức subscribe để lắng nghe,
+Bao giờ có kết quả thì thực thi tiếp, lấy được dữ liệu thì đổ sang file html
+
+Chi tiết : tạo hàm getProduct ở file service có phương thức là get để lấy ra id sp rồi sang file detail.ts

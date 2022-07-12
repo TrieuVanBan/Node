@@ -1,0 +1,52 @@
+1. Tạo 1 project với git
+- clone 1 project có sẵn về máy
++ Tạo 1 folder => mở folder đó kích chuột phải => git bash => gõ git clone (dán đườg link muốn clone về)
+
+
+
+- Tạo 1 project trên git
++ Tạo 1 github repository (nơi chứa code)
++ Kích chuột phải vào thư mục đó và chọn git bash
++ git clone link_repository 
++ git status (kiểm tra trạng thái của các file)
++ git add .
++ git commit -m "your_message" (Tạo nội dung commit)
++ git push origin main
+
+
+- Đẩy code ở máy tính lên git
+ + Mờ folder cần đẩy
+ + Kích chuột phải chọn git bash
+ + git init
+ + git status
+ + git add .
+ + git status
+ + git commit -m "first messege"
+ + vào git coppy : git remove add ... dòng 6
+ + git push origin master 
+
+
+*** Câu lệnh thường dùng:
+- Làm cá nhân:
++ git status
++ git add
++ git commit
++ git push
+
+-Làm việc nhóm:
++ git pull (Kéo code trên git về máy tính) git pull origin main
++ git merge {tên branch muốn tổng hợp lại} (Ghép code từ nhánh này sang nhánh kia)
++ Tạo 1 nhánh mới: git checkout -b eric
++ git conflict
++ git checkout branch/commit
+
+
+- Tạo 1 branch mới:
+ + git checkout -b eric (eric là tên bất kì bạn muốn đặt)
+ + git branch (ktra có những branch nào trong git của bạn)
+ + git branch -d {tên branch cần xóa}
+ + git checkout main (đổi nhánh)
+ + viết code
+ + git add .
+ + git commit -m 'add file'
+ + git push origin eric (giống tên vừa tạo ở trên)

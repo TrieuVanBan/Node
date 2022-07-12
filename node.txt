@@ -1,0 +1,23 @@
+
+
+
+on tap
+1. npm init -y
+3. npm i mongoose express babel-cli babel-preset-env babel-preset-stage-0
+4. npm i --save-dev morgan 
+5. npm i cors
+   npm i nodemon
+
+
+http://localhost:8000/api/products
+"start": "nodemon ./src/app.js --exec babel-node -e js"
+
+npm start
+
+npm i jsonwebtoken
+
+
+
+
+picsum
+ng g c ten
