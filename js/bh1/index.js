@@ -135,7 +135,7 @@ var myInfo = {
     name: "Ban Trieu",
     age: 20,
     address: "Ha Noi",
-    getName: function() {
+    getName: function () {
         return this.name;
     }
     // function : là 1 phương thức / method
@@ -156,7 +156,7 @@ var myInfo = {
 
 //     this.getName = function(){
 //         return `${this.firstName} ${this.lastName}`
-    
+
 //     }
 // }
 
@@ -284,7 +284,7 @@ var myInfo = {
 //     i++;
 //     console.log(i);
 // }while(i<10);
-  
+
 
 // do{
 //     i++;
@@ -303,30 +303,30 @@ var myInfo = {
 //         continue;
 //     }
 //     console.log(i);
-    
+
 // }
 
 
 // vòng lặp lồng nhau
-    // var array = [
-    //     [1,2],
-    //     [3,4],
-    //     [5,6]
-    // ];
+// var array = [
+//     [1,2],
+//     [3,4],
+//     [5,6]
+// ];
 
-    // for (var i = 0; i < array.length; i++){
-    //     for( var j = 0; j < array[i].length; j++){
-    //         console.log(array[i][j]);
-    //     }
-    // }
+// for (var i = 0; i < array.length; i++){
+//     for( var j = 0; j < array[i].length; j++){
+//         console.log(array[i][j]);
+//     }
+// }
 
-    // for(var i =10; i > 0; i--){
-    //     console.log(i);
-    // }
+// for(var i =10; i > 0; i--){
+//     console.log(i);
+// }
 
-    // for(var i = 100; i >= 0; i -= 5){
-    //     console.log(i);
-    // }
+// for(var i = 100; i >= 0; i -= 5){
+//     console.log(i);
+// }
 
 
 //------------------------------------------------------------
@@ -388,7 +388,7 @@ var myInfo = {
 // some(): Mỗi lần lặp qua 1 phần tử và kiểm tra điều kiện, đúng là dừng lặp luôn về trả về true
 // find(): Mỗi lần lặp qua 1 phần tử và kiểm tra điều kiện, đúng là dừng lặp về trả về 
 // nội dung trong phần tử chứ điều kiện đó
-// filter(): Mỗi lần lặp qua 1 phần tử và kiểm tra điều kiện, lấy ra các phân tử thỏa mãn đkien
+// filter(): Mỗi lần lặp qua 1 phần tử và kiểm tra điều kiện, lấy ra các phần tử thỏa mãn đkien
 // map(): Duyệt qua mảng
 // reduce():Tính tổng 1 phần tử nào đó trong {} trong mảng[] : ví dụ age
 
@@ -409,7 +409,6 @@ var myInfo = {
 
 
 // function coursesHandle(course, index){
-    
 //     return {
 //         id:course.id,
 //         name:`Tên bạn là: ${course.name}`,
@@ -477,7 +476,6 @@ var myInfo = {
 //includes(chuỗi) : tìm kiếm chữ trong chuỗi cần tìm
 //includes(mảng) : tìm kiếm phần tử trong chuỗi cần tìm
 
-
 // var title = "Javascrip Php C"
 // console.log(title.includes("PHp", 0)); //0 tìm kiếm từ vị trí 0
 
@@ -522,7 +520,7 @@ var myInfo = {
 // Định nghĩa forEach2
 
 // Array.property.forEach2 = function(callback){
-    
+
 // }
 
 // var courses = [
@@ -721,20 +719,405 @@ var myInfo = {
 
 
 // ----------------------------------------------------------------
-// DOM Style
-var boxElement = document.querySelector('.box');
+//* DOM Style CSS
+
+// var boxElement = document.querySelector('.box');
 // boxElement.style.background = "blue";
 // boxElement.style.width = "100px";
 // boxElement.style.height = "100px";
 
 // Sử dụng thêm nhiều thuộc tính
-Object.assign(boxElement.style, {
-    width: "1000px",
-    height: "400px",
-    background: "yellow",
-})
+// Object.assign(boxElement.style, {
+//     width: "1000px",
+//     height: "400px",
+//     background: "yellow",
+// })
+// console.log(boxElement.style);
 
-console.log(boxElement.style);
 
+
+//* Classlist property (Chỉ lấy ra được element)
+
+// add: thêm class vào element
+// contains: Kiểm tra class có nằm trong element hay không
+// remove: xóa bỏ 1 class
+// toggle: khi element có class đó rồi thì xóa, còn không có thì nó thêm class đó vào
+
+// var boxElement = document.querySelector('.box');
+// console.log(boxElement.classList.value);
+// boxElement.classList.add('red')
+// boxElement.classList.remove('red')
+// boxElement.classList.toggle('red')
+// console.log(boxElement.classList.contains("rgg")); // Kiểm tra có là true, không có là false
+
+
+// DOM Events (Sự kiện diễn ra trong quá trình người dùng tương tác)
+// 1. Attribute events
+// onclick trong h1
+// 2. Assign event using the element node
+// var h1Elements = document.querySelectorAll('.box h1');
+// for (var i = 0; i < h1Elements.length; ++i){
+//     h1Elements[i].onclick = function(e){
+//         console.log(e.target);
+//     }
+// }
+
+
+// DOM Events
+//**  1. Input / select
+// change, input,
+// var inputValue ;
+// var inputElement = document.querySelector('input[type="checkbox"]');
+// inputElement.oninput = function(e){
+//     // inputValue = e.target.value;
+//     console.log(e.target.checked);
+// }
+
+// var inputElement = document.querySelector('select');
+// inputElement.onchange = function(e){
+//     console.log(e.target.value);
+// }
+
+//**  2. Keyup / dow
+// onkeyup: khi ấn và nhả tay khỏi bàn phím thì nhận dữ liệu
+// onkeydown: khi ấn bàn phím thì nhận dữ liệu
+// onkeypress: khi ấn giữ bàn phím thì nhận nhiều dữ liệu
+// var inputElement = document.querySelector('input[type="text"]');
+// inputElement.onkeydown = function(e){
+//     console.log(e.which);
+//     switch (e.which) {
+//         case 27:
+//             console.log("Exit");
+//             break;
+//         case 13:
+//             console.log("oceee");
+//             break;
+//     }
+// }
+
+//** 3. preventDefault (Loại bỏ hành vi mặc định của trình duyệt trong html)
+
+// var aElements = document.links;
+// for(var i=0; i<aElements.length; ++i){
+//     aElements[i].onclick = function(e){
+// Nếu đường dẫn khác http://google.com thì không vào được trang đó (startsWith)
+//         if(!e.target.href.startsWith("http://google.com")){
+//             e.preventDefault();
+//         }
+//     }
+// }
+
+// var ulElement = document.querySelector("ul");
+// Khi ấn chuột và nhả ra (onmousedown) và preventDefault (Loại bỏ hành vi mặc định của trình duyệt trong html)
+// ulElement.onmousedown = function(e) {
+//     e.preventDefault();
+// }
+// ulElement.onclick = function(e){
+//     console.log(e.target);
+// }
+
+//** 4. stopPropagation (Ngăn chặn nổi bọt)
+// Khi click vào thẻ con nó sẽ nổi bọt và in ra cả thẻ cha, nếu không muốn in thẻ cha ra khi ấn vào thẻ con 
+// thì dùng stopPropagation vào thẻ con để ngăn chặn nổi bọt ra thẻ cha
+
+// var divElement = document.querySelector('.div_events');
+//     divElement.onclick = function(e){
+//         console.log("DIV");
+//     }
+
+// var clickElement = document.querySelector('.click_events');
+//     clickElement.onclick = function(e){
+//         e.stopPropagation();
+//         console.log("CLICK");
+//     }
+
+// ** 5. Event listener
+// var clickElement = document.querySelector('.click_events');
+
+// function viec1(){
+//     console.log("Thực hiện xong việc 1");
+// }
+// function viec2(){
+//     console.log("Thực hiện xong việc 2");
+// }
+
+// clickElement.addEventListener("click", viec1);
+// clickElement.addEventListener("click", viec2);
+
+// Sau 3s thì công việc 1 bị dừng lại không được thực hiện
+// setTimeout(function(){
+//     clickElement.removeEventListener("click", viec1);
+// },3000)
+
+
+// ** 6. JSON : Là 1 định dạng dữ liệu (Chuỗi)
+// Json: number, string, null, object, array
+// Stringify:Từ Javascrip Types -> Json
+// Parse: từ Json -> Javascrip Types
+
+// var json = '["JS","PHP","C++"]';
+// var json = '{"name":"Ban Trieu", "age":20}';
+
+// var a = '1';
+// console.log(typeof JSON.parse(a));
+
+// console.log(JSON.stringify([
+//     'Java', 'PHP'
+// ]));
+
+
+
+// ----------------------------------------------------------------
+// Promise (3 trạng thái:   
+// pending: Kết quả chưa được xử lý xong, đang chờ
+// fullfilled: Tác vụ được thực hiện thành công
+// rejected: Tác vụ không đồng bộ thất bại)
+// var promise = new Promise(function(resolve, reject) {
+//     // resolve:Thành công
+//     // reject: thất bại
+//     // resolve({
+//     //     name:"Ban",
+//     //     age:20
+//     // })
+//     resolve()
+// })
+
+// Khi thành công thì chạy vào then
+// promise.then(function(){
+//     // Trả về 1
+//     return 1;
+// })
+// .then(function(data){
+//     // Nhận 1 ở trên và in ra 1, rồi trả về 2
+//     console.log(data);
+//     return 2;
+// })
+// .then(function(data){
+//     // Nhận 2 ở trên và in ra 2, rồi trả về 3
+//     console.log(data);
+//     return 3;
+// })
+// .then(function(data){
+//     // in ra 3
+//     console.log(data);
+// })
+// // Khi thất bại thì chạy vào catch
+// .catch(function(){
+//     console.log("Thất bại");
+// })
+// // Khi thành công và thất bại đều chạy vào finally
+// .finally(function() {
+//     console.log("Done");
+// })
+
+// ----------------------
+// ** Promise (chain)
+// Ví dụ 1
+// function sleep(ms){
+//     return new Promise(function(resolve){
+//         setTimeout(resolve, ms);
+//     })
+// }
+// sleep(1000) //Sau 1s chạy vào hàm đầu tiên in ra 1
+// .then(function(){
+//     console.log(1);
+//     // trả về Promise sleep, sau 1s mới chạy đến .then tiếp theo
+//     return sleep(1000)
+// })
+// .then(function(){
+//     console.log(2);
+//     return sleep(1000)
+// })
+// .then(function(){
+//     console.log(3);
+//     // chạy đến 3 gặp lỗi, chạy vào catch in ra lỗi
+//     return new Promise(function (resolve, reject) {
+//         reject("Có lỗi xảy ra");
+//     })
+// })
+// .then(function(){
+//     console.log(4);
+//     return sleep(1000)
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+
+// Ví dụ 2
+// function notHell(value) {
+//     return new Promise(function (resolve) {
+//         resolve(value);
+//     });
+// }
+// notHell(1)
+//     .then(function (value) {
+//         return value + 1;
+//     })
+//     .then(function (value) {
+//         return value + 1;
+//     })
+//     .then(function (value) {
+//         return value + 1;
+//     })
+//     .then(function (value) {
+//         console.log(value + 1);
+//     });
+
+
+// *1. Promise.resolve() : luôn trả về thành công
+// *2. Promise.reject() : luôn trả về thất bại
+// *3. Promise.all() : luôn trả 
+
+// var Promise = Promise.resolve("Success");
+// var Promise = Promise.reject("Error");
+// Promise.then(function(result){
+//     console.log('Thành công :', result);
+// })
+// .catch(function(err){
+//     console.log('Thất bại : ', err);
+// })
+
+
+// var promise1 = new Promise(function(resolve){
+//     setTimeout(function(){
+//         resolve([1]);
+//     }, 1000)
+// })
+// var promise2 = new Promise(function(resolve){
+//     setTimeout(function(){
+//         resolve([2,3]);
+//     }, 2000)
+// })
+// var promise2 = Promise.reject("Có lỗi !")
+
+// Dùng Promise.all chỉ cần 1 hàm lỗi thì sẽ dừng (catch) và thông báo lỗi ra
+// Promise.all([promise1,promise2])
+// .then(function(result){
+//     var result1 = result[0]
+//     var result2 = result[1]
+//     console.log(result1.concat(result2));
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+// ----------------------
+// ** Promise example
+// var users = [
+//     { 
+//         id: 1, 
+//         name: 'Long', 
+//     },
+//     { 
+//         id: 2, 
+//         name: 'Ban', 
+//     },
+//     { 
+//         id: 3, 
+//         name: 'Duong', 
+//     }
+// ]
+
+// var comments = [
+//     { 
+//         id: 1, 
+//         user_id: 1, 
+//         content: "Ban co phai la Ban khong ?"
+//     },
+//     { 
+//         id: 2, 
+//         user_id: 2, 
+//         content: "Dung! Toi la Ban"
+//     },
+//     { 
+//         id: 3, 
+//         user_id: 1, 
+//         content: "Toi co chuyen muon hoi ban "
+//     },
+//     { 
+//         id: 4, 
+//         user_id: 2, 
+//         content: "Oce"
+//     },
+// ]
+// B1: Lấy comments
+// B2: Từ comments lấy ra user_id
+// Từ user_id lấy ra user tương ứng
+
+// Fake API
+// function getComments(){
+//     return new Promise(function(resolve){
+//         setTimeout(function(){
+//             resolve(comments);
+//         }, 1000)
+//     })
+// }
+
+// function getUserId(userIds){
+//     return new Promise(function(resolve){
+//         var result = users.filter(function(user){
+//             return userIds.includes(user.id);
+//         })
+//         setTimeout(function(){
+//             resolve(result);
+//         },1000)
+//     })
+// }
+
+// getComments()
+// .then(function(comments){
+//     var userIds = comments.map(function(comment){
+//         return comment.user_id
+//     });
+
+//     return getUserId(userIds)
+//     .then(function(user){
+//         return {
+//             users: user,
+//             comments: comments
+//         }
+//     })
+// })
+// .then(function(data){
+//     var conmentBox = document.getElementById("comment-box");
+//     var html = "";
+
+//     data.comments.forEach(function(comment){
+//         var user = data.users.find(function(user){
+//             return user.id === comment.user_id
+//         });
+//         html += `<li>${user.name}: ${comment.content}</li>`
+//     })
+//     conmentBox.innerHTML = html 
+// })
+
+
+
+// ----------------------------------------------------------------
+// Fetch: 
+
+var userApi = "https://jsonplaceholder.typicode.com/users";
+
+fetch(userApi)
+    .then(function (response) {
+        return response.json();
+        // response.json() là JSON.parse: JSON -> Javascrip tyles (là dữ liệu dạng Javascrip)
+    })
+    .then(function (users) {
+        var htmls = users.map(function (user) {
+            return `<li>
+                <h2>${user.name}</h2>
+                <p>${user.username}</p>
+                <p>${user.email}</p>
+                <p>${user.phone}</p>
+        </li>`
+        })
+        var html = htmls.join("");
+        document.getElementById('comment-box').innerHTML = html;
+    })
+    .catch(function (err) {
+        alert("Có lỗi");
+    })
 
 
