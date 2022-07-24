@@ -1097,27 +1097,255 @@ var myInfo = {
 // ----------------------------------------------------------------
 // Fetch: 
 
-var userApi = "https://jsonplaceholder.typicode.com/users";
+// var userApi = "https://jsonplaceholder.typicode.com/users";
+// fetch(userApi)
+//     .then(function (response) {
+//         return response.json();
+//         // response.json() là JSON.parse: JSON -> Javascrip tyles (là dữ liệu dạng Javascrip)
+//     })
+//     .then(function (users) {
+//         var htmls = users.map(function (user) {
+//             return `<li>
+//                 <h2>${user.name}</h2>
+//                 <p>${user.username}</p>
+//                 <p>${user.email}</p>
+//                 <p>${user.phone}</p>
+//         </li>`
+//         })
+//         var html = htmls.join("");
+//         document.getElementById('comment-box').innerHTML = html;
+//     })
+//     .catch(function (err) {
+//         alert("Có lỗi");
+//     })
 
-fetch(userApi)
-    .then(function (response) {
-        return response.json();
-        // response.json() là JSON.parse: JSON -> Javascrip tyles (là dữ liệu dạng Javascrip)
-    })
-    .then(function (users) {
-        var htmls = users.map(function (user) {
-            return `<li>
-                <h2>${user.name}</h2>
-                <p>${user.username}</p>
-                <p>${user.email}</p>
-                <p>${user.phone}</p>
-        </li>`
-        })
-        var html = htmls.join("");
-        document.getElementById('comment-box').innerHTML = html;
-    })
-    .catch(function (err) {
-        alert("Có lỗi");
-    })
+
+// ** JSON server --------------------
+// var couserApi = "http://localhost:3000/couser";
+// fetch(couserApi)
+//     .then(function (response) {
+//         return response.json()
+//     })
+//     .then(function (cousers) {
+//         var htmls = cousers.map(function (couser) {
+//             return `<li>
+//             <img class="img" src="${couser.image}" alt="">
+//             <h2 class="red">${couser.name}</h2>
+//             <p>${couser.description}</p>
+//         </li>`
+//         })
+//         var html = htmls.join('');
+//         document.getElementById("comment-box").innerHTML = html;
+//     })
 
 
+// ** Thêm, Sửa, Xóa API --------------------
+
+// var courseApi = "http://localhost:3000/couser";
+
+// cách:1
+// function start() {
+//     getCourse(function (courses) {
+//         renderCourse(courses)
+//         handleCreate();
+//     })
+// }
+// cách:2
+// function start() {
+//     getCourse(renderCourse)
+//     handleCreate()
+// }
+
+// start();
+
+// tạo Function
+// function getCourse(callback) {
+//     fetch(courseApi)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(callback)
+// }
+
+// function createCourse(data, callback) {
+//     var options = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//           },
+//         body: JSON.stringify(data)
+//     };
+//     fetch(courseApi, options)
+//         .then(function(response){
+//             response.json();
+//         })
+//         .then(callback)
+// }
+
+// function deleteCourse(id) {
+//     var options = {
+//         method: 'DELETE',
+//         headers: {
+//             'Content-Type': 'application/json'
+//           }
+//     };
+//     fetch(courseApi +'/'+ id, options)
+//         .then(function(response){
+//             response.json();
+//         })
+//         .then(function () {
+            
+//         })
+// }
+
+// function renderCourse(courses) {
+//     var listCourse = document.getElementById("comment-box");
+//     var htmls = courses.map(function (course) {
+//         return `<li>
+//             <h2>${course.id}</h2>
+//             <img class="img" src="${course.image}" alt="">
+//             <h2>${course.name}</h2>
+//             <p>${course.description}</p>
+//             <button onclick="deleteCourse(${course.id})" >Xóa </button>
+//             <button id="update" onclick="handleUpdate(${course.id})">Update</button>
+//         </li>`
+//     })
+//     listCourse.innerHTML = htmls.join('');
+// }
+
+// function handleCreate() {
+//     var createBtn = document.querySelector("#create");
+//     createBtn.onclick = function () {
+//         var name = document.querySelector('.name').value;
+//         var image = document.querySelector('.image').value;
+//         var description = document.querySelector('.description').value;
+
+//         var FormData = {
+//             name: name,
+//             image: image,
+//             description: description
+//         }
+
+//         createCourse(FormData)
+//     }
+// }
+
+
+
+
+// ----------------------------------------------------------------
+// ES6 - Ecmascript6
+//-----1. var / let, const :Scope, hosting
+
+// if (true) {
+//     var a = "123"
+// }
+// console.log(a); // var mới truy cập được ở bên ngoài block, còn const và let không truy cập được ngòai block.
+
+// a = 1;
+// var a;
+// console.log(a);// var mới khai báo được kiểu này
+
+// -----2. const / let, var: Assignment
+// var a = 1;
+// a=100;
+// console.log(a); //const không có thể sử dụng gán đến lần thứ 2, var, let thì được.
+
+// Nối
+// const a = "Ban"
+// const c = "đzai"
+// const b = `Xin chào0: ${a} ${c}`;
+// console.log(b);
+
+
+// -------------3: Arrow function -------------
+// Sau => mặc định là return, trường là {} thì không return
+// var sum = (a, b) => a+b
+// console.log(sum(1,2));
+
+// Nếu muốn return về {} thì thêm () bên ngoài
+// var a = (c,b) => ({c:c, b:b})
+// console.log(a(2,2));
+
+// const course = {
+//     name: 'Bannshd',
+//     getName: function () {
+//         // this là khi mình gọi course.getName() ờ dòng 1275 thì this chính là course
+//         // Khi có this thì không dùng được Arrow function
+//         return this.name
+//     }
+// }
+// console.log(course.getName());
+
+// Không sử dụng được khi khai báo constructor
+// const People = function(name,age) {
+//     this.name1 = name;
+//     this.age1 = age
+// }
+// const jsPeople = new People("Ban", 20)
+// console.log(jsPeople);
+
+
+// -------------4: Classes -------------
+// class Product {
+//     constructor(name, price){
+//         this.name = name;
+//         this.price = price;
+//     }
+//     getName(){
+//         return this.name;
+//     }
+//     getPrice(){
+//         return this.name;
+//     }
+// }
+// const Product1 = new Product("Áo gió", 100)
+// const Product2 = new Product("Áo phông", 200)
+
+// console.log(Product1.getName());
+// console.log(Product2);
+
+
+// -------------5: Default parameter values -------------
+// function logger(log, type='log') {
+//     console[type](log);
+// }
+// // Khi không truyền đối số thứ 2 thì chỉ hiện log, truyền đối số thứ 2 thì thêm kiểu là warn vẫn hiện log
+// logger('message...', 'warn')
+
+
+// -------------6: Enhanced object literals -------------
+//*1. Định nghĩa key: value cho object
+// var name = 'Bannhsd';
+// var age = 21;
+
+// var people = {
+//     // name:name,
+//     // Có thể viết ngắn gọn như sau
+//     name,
+//     age,
+
+//     //*2. Định nghĩa method cho object
+//     getName(){
+//         return name;
+//     }
+// }
+// console.log(people.getName());
+
+//*3. Định nghĩa key cho object dưới dạng biến
+// var fielName = "name"
+// var fielprice = 'price'
+
+// var course = {
+//     [fielName]: 'Javascrip',
+//     [fielprice]: 2000
+// }
+// console.log(course);
+
+
+// -------------7: Destructuring, Rest -------------
+// var arr = ['Product1', 'Product2', 'Product3']
+//     // var [a,,b,c] = arr
+// var [a, ...rest] = arr
+//     // console.log(ab,c);
+// console.log(a, rest);
